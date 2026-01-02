@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Экскурсии — Путеводитель по биологии</title>
+  <meta name="description" content="Список экскурсий по биологии для 6-8 классов: темы, цели и материалы.">
+  <link rel="stylesheet" href="public/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="index.html">Путеводитель по биологии</a>
+      </div>
+      <nav class="nav">
+        <a class="btn-ghost" href="index.html">Главная</a>
+        <button id="open-faq-2" class="btn-outline">FAQ</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="trips">
+      <h2>Экскурсии</h2>
+
+      <section class="grade">
+        <h3>6 класс</h3>
+        <div class="card-grid">
+          <article class="trip-card">
+            <h4>Экскурсия 1</h4>
+            <p class="small text-muted">Живая и неживая природа; наблюдение за живыми объектами</p>
+            <a class="btn-primary-outline" href="#">Подробнее</a>
+          </article>
+          <article class="trip-card">
+            <h4>Экскурсия 2</h4>
+            <p class="small text-muted">Живые организмы зимой</p>
+            <a class="btn-primary-outline" href="#">Подробнее</a>
+          </article>
+          <article class="trip-card">
+            <h4>Экскурсия 3</h4>
+            <p class="small text-muted">Живые организмы весной</p>
+            <a class="btn-primary-outline" href="#">Подробнее</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="grade">
+        <h3>7 класс</h3>
+        <div class="card-grid">
+          <article class="trip-card">
+            <h4>Экскурсия 1</h4>
+            <p class="small text-muted">Многообразие лишайников</p>
+            <a class="btn-primary-outline" href="#">Подробнее</a>
+          </article>
+          <article class="trip-card">
+            <h4>Экскурсия 2</h4>
+            <p class="small text-muted">Многообразие растений леса</p>
+            <a class="btn-primary-outline" href="#">Подробнее</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="grade">
+        <h3>8 класс</h3>
+        <div class="card-grid">
+          <article class="trip-card">
+            <h4>Экскурсия 1</h4>
+            <p class="small text-muted">Многообразие птиц парка</p>
+            <a class="btn-primary-outline" href="#">Подробнее</a>
+          </article>
+          <article class="trip-card">
+            <h4>Экскурсия 2</h4>
+            <p class="small text-muted">Видовое разнообразие</p>
+            <a class="btn-primary-outline" href="#">Подробнее</a>
+          </article>
+        </div>
+      </section>
+
+    </section>
+
+    <section class="resources">
+      <h2>Справочные материалы</h2>
+      <ul>
+        <li>Правила поведения</li>
+        <li>Чек-лист наблюдения</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© Путеводитель по биологии — для школьных исследований</p>
+      <p>Контакты: пример@domain.tld</p>
+    </div>
+  </footer>
+
+  <!-- FAQ Modal (reusable) -->
+  <div id="faq-modal-2" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="faq-title-2">
+    <div class="modal-backdrop" data-action="close"></div>
+    <div class="modal-panel" role="document">
+      <header class="modal-header">
+        <h3 id="faq-title-2">Часто задаваемые вопросы</h3>
+        <button class="modal-close" data-action="close" aria-label="Закрыть">✕</button>
+      </header>
+      <div class="modal-body">
+        <dl class="faq-list">
+          <dt>Как подготовиться к экскурсии?</dt>
+          <dd>Подготовьте блокноты, удобную обувь, запас воды и ознакомьтесь с правилами поведения.</dd>
+          <dt>Можно ли проводить экскурсии в зимнее время?</dt>
+          <dd>Да, но адаптируйте задания под погодные условия и безопасность участников.</dd>
+        </dl>
+      </div>
+      <footer class="modal-footer">
+        <button class="btn-primary" data-action="close">Понятно</button>
+      </footer>
+    </div>
+  </div>
+
+  <script src="src/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+@font-face {
+  font-family: 'JetBrains Sans';
+  src: url('./fonts/JetBrainsSans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('./fonts/JetBrainsMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root{
+  --color-bg: #F7FBF8; /* чуть теплее */
+  --color-bg-2: linear-gradient(180deg, rgba(22,163,74,0.06), rgba(255,255,255,0));
+  --color-text: #0F1723;
+  --color-muted: #6B7280;
+  --color-accent: #16A34A;
+  --color-accent-2: #10733a;
+  --color-card: #FFFFFF;
+  --container-max: 1100px;
+  --radius: 12px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'JetBrains Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: var(--color-bg);
+  background-image: var(--color-bg-2);
+  color:var(--color-text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+  -webkit-font-feature-settings: "liga" 1;
+}
+
+.container{
+  width:100%;
+  max-width:var(--container-max);
+  margin:0 auto;
+  padding:28px;
+}
+
+.site-header{
+  background:transparent;
+  padding:18px 0;
+  position:sticky;
+  top:0;
+  z-index:20;
+  backdrop-filter: blur(6px);
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.brand h1, .brand a{
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, 'Roboto Mono', 'Courier New', monospace;
+  font-weight:700;
+  font-size:20px;
+  margin:0;
+  color:var(--color-text);
+  text-decoration:none;
+  letter-spacing:0.4px;
+}
+
+.nav{display:flex;gap:12px;align-items:center}
+
+.btn-primary{
+  background:var(--color-accent);
+  color:white;
+  border:none;
+  padding:12px 18px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:700;
+  box-shadow:0 6px 20px rgba(22,163,74,0.18);
+  transition:transform .14s ease, box-shadow .14s ease, opacity .14s;
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(22,163,74,0.18)}
+.btn-primary:active{transform:translateY(0);}
+.btn-primary-outline{
+  background:transparent;
+  color:var(--color-accent-2);
+  border:2px solid rgba(16,115,58,0.12);
+  padding:10px 16px;
+  border-radius:10px;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  font-weight:700;
+}
+.btn-outline{background:transparent;border:1px solid var(--color-muted);padding:8px 12px;border-radius:10px;cursor:pointer}
+.btn-ghost{background:transparent;border:none;color:var(--color-muted);text-decoration:none}
+
+/* Hero */
+.hero{
+  padding:64px 0 48px 0;
+}
+.hero-inner{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:28px;
+  align-items:center;
+}
+.hero-content{padding-right:12px}
+.hero-title{
+  font-size:44px;
+  line-height:1.02;
+  margin:0 0 12px 0;
+  letter-spacing:-0.02em;
+}
+.hero-sub{color:var(--color-muted);margin:0 0 22px 0;font-size:18px}
+.hero-ctas{display:flex;gap:12px}
+
+/* Hero art: decorative blob + simple plant illustration via gradient */
+.hero-art{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.placeholder-art{
+  background: radial-gradient(1200px 400px at 10% 10%, rgba(22,163,74,0.12), transparent 20%),
+              linear-gradient(135deg,#eefaf0,#ffffff);
+  height:260px;
+  border-radius:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--color-muted);
+  width:100%;
+  max-width:520px;
+  box-shadow:0 12px 40px rgba(15,23,35,0.06);
+  position:relative;
+  overflow:hidden;
+}
+.placeholder-art::before{
+  content:"";
+  position:absolute;
+  right:-80px;top:-40px;
+  width:360px;height:360px;
+  background: radial-gradient(circle at 30% 30%, rgba(22,163,74,0.12), rgba(22,163,74,0.04) 40%, transparent 60%);
+  transform:rotate(18deg);
+}
+.placeholder-art .art-emoji{font-size:48px}
+
+.features{display:grid;grid-template-columns:1fr;gap:16px;margin-top:22px}
+.feature{background:var(--color-card);padding:18px;border-radius:16px;box-shadow:0 6px 18px rgba(15,23,35,0.06);transition:transform .14s ease, box-shadow .14s ease}
+.feature:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(15,23,35,0.08)}
+.feature h4{margin:0 0 8px 0}
+.feature p{margin:0;color:var(--color-muted)}
+
+.site-footer{padding:28px 0;color:var(--color-muted)}
+.footer-inner{display:flex;justify-content:space-between;gap:12px;align-items:center}
+
+/* Модал */
+.modal{display:none}
+.modal[aria-hidden="false"]{display:block}
+.modal-backdrop{position:fixed;inset:0;background:rgba(3,7,18,0.36);backdrop-filter:blur(2px)}
+.modal-panel{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%) scale(1);background:var(--color-card);border-radius:14px;max-width:720px;width:92%;box-shadow:0 20px 60px rgba(2,6,23,0.32);overflow:hidden;animation:modal-in .16s ease}
+@keyframes modal-in{from{transform:translate(-50%,-50%) scale(0.96);opacity:0}to{transform:translate(-50%,-50%) scale(1);opacity:1}}
+.modal-header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid #f1f3f5}
+.modal-body{padding:18px 20px}
+.modal-footer{padding:12px 20px;border-top:1px solid #f1f3f5;display:flex;justify-content:flex-end}
+.modal-close{background:transparent;border:none;font-size:18px;cursor:pointer}
+
+.faq-list dt{font-weight:700;margin-top:12px}
+.faq-list dd{margin:6px 0 12px 0;color:var(--color-muted)}
+
+/* Responsive */
+@media(min-width:720px){
+  .hero-inner{grid-template-columns:1fr 480px}
+  .features{grid-template-columns:repeat(3,1fr)}
+  .hero-title{font-size:56px}
+}
+@media(max-width:720px){
+  .container{padding:18px}
+  .hero-title{font-size:36px}
+  .placeholder-art{height:200px}
+}
+@media(max-width:420px){
+  .container{padding:16px}
+  .hero-title{font-size:28px}
+  .placeholder-art{height:160px}
+  .footer-inner{flex-direction:column;align-items:flex-start}
+}
+
+/* Small utilities */
+.text-muted{color:var(--color-muted)}
+.small{font-size:14px}
+
+/* Accessibility: focus styles */
+:focus{outline:3px solid rgba(22,163,74,0.12);outline-offset:3px}
