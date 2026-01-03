@@ -172,6 +172,23 @@ button { border: none; background: none; font-family: inherit; cursor: pointer; 
   transform: translateY(-2px);
 }
 
+/*work*/
+.zalupa-work {
+  background: var(--accent);
+  color: var(--text-main);
+  padding: 16px 36px;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-size: 18px;
+  transition: 0.2s;
+  box-shadow: 0 10px 30px rgba(180, 244, 63, 0.3);
+}
+
+.zalupa-work:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
 .btn-icon {
   width: 58px;
   height: 58px;
