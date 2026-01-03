@@ -6,79 +6,157 @@
   <title>Путеводитель по биологии</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="public/style.css">
 </head>
 <body>
 
-<header class="floating-header">
-  <div class="nav-pill">
-    <div class="brand">BioGuide</div>
-    <nav>
-      <a href="#about">О нас</a>
-      <a href="#trips">Экскурсии</a>
-      <button id="open-faq">FAQ</button>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <span class="brand-dot"></span>
+      BioGuide.
+    </div>
+    <nav class="main-nav">
+      <a href="#about" class="nav-link">О проекте</a>
+      <a href="#programs" class="nav-link">Программы</a>
+      <a href="#gallery" class="nav-link">Галерея</a>
+      <button id="open-faq" class="nav-link">Вопросы</button>
     </nav>
-    <a href="#contacts" class="btn-circle">→</a>
+    <div class="header-actions">
+      <a href="#contacts" class="btn-outlined">Связаться</a>
+      <a href="trip.html" class="btn-primary-sm">Начать →</a>
+    </div>
   </div>
 </header>
 
 <main>
-  <section class="hero-wrapper">
-    <div class="hero-grid">
-      <div class="hero-text-card">
-        <div class="badge">6–8 классы</div>
-        <h1 class="display-text">
-          ИССЛЕДУЙ<br>
-          <span class="highlight">ПРИРОДУ</span><br>
-          ВОКРУГ
-        </h1>
-        <p class="hero-desc">Готовые маршруты, чек-листы и правила для юных биологов.</p>
-        <div class="hero-actions">
-          <a href="trip.html" class="btn-primary-lg">Начать путь</a>
-          <a href="info.html" id="open-faq-hero" class="zalupa-work" aria-label="Информация">Как это работает</a>
-        </div>
+  <section class="hero-section">
+    <div class="hero-content">
+      <div class="hero-label">Для 6–8 классов</div>
+      <h1 class="hero-title">
+        ПОГРУЖЕНИЕ<br>
+        В <span class="accent-text">ЖИВУЮ <span class="title-graphic" aria-hidden="true">
+          <!-- inline SVG листа, чтобы не добавлять новый файл -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+            <path fill="currentColor" d="M12 2C8 6 4 8 2 9c.5 4 3.5 7.5 8 8 0 0 1.5-4 6-8 2-1 2.5-4 2-7-2 .5-5 1-6 0z"/>
+          </svg>
+        </span></span> ПРИРОДУ
+      </h1>
+      <p class="hero-desc">
+        Комплексные маршруты для школьных исследований. Мы объединяем теорию учебников с практикой реального мира. Исследуй, наблюдай, записывай.
+      </p>
+      <div class="hero-btns">
+        <a href="trip.html" class="btn-primary-lg">Выбрать маршрут</a>
+        <button id="open-faq-hero" class="btn-secondary-lg">Как это работает?</button>
       </div>
-
-      <div class="hero-visual-card">
-        <div class="abstract-nature">
-          <div class="leaf-shape"></div>
-          <div class="circle-shape"></div>
-        </div>
-        <div class="stat-bubble">
-          <span>12+</span>
-          <small>Маршрутов</small>
-        </div>
+    </div>
+    <div class="hero-visual">
+      <div class="visual-card main-visual">
+        <!-- бейджи удалены по просьбе -->
       </div>
     </div>
   </section>
 
-  <section class="bento-section" id="about">
-    <div class="bento-grid">
-      <article class="bento-card green-card">
-        <h3>Практика</h3>
-        <p>Чек-листы для наблюдений в полевых условиях.</p>
-        <div class="deco-line"></div>
+  <section class="wide-bento-section">
+    <div class="section-header">
+      <h2>Инструменты исследователя</h2>
+      <p>Всё, что нужно для полноценного урока на свежем воздухе</p>
+    </div>
+
+    <div class="bento-grid-expanded">
+      <article class="bento-item item-large green-theme">
+        <div class="item-content">
+          <h3>Полевые дневники</h3>
+          <p>Готовые шаблоны для записи наблюдений. Структурированные листы, которые помогают ученикам фокусироваться на главном.</p>
+          <div class="decoration-circle"></div>
+        </div>
       </article>
 
-      <article class="bento-card image-card">
-        <h3>Учителям</h3>
-        <p>Методички и планы уроков.</p>
+      <article class="bento-item item-tall image-theme">
+        <div class="item-content">
+          <h3>Фото-охота</h3>
+          <div class="tag">Конкурс</div>
+          <p>Загружай свои находки и определяй виды растений.</p>
+        </div>
       </article>
 
-      <article class="bento-card white-card">
-        <h3>Безопасность</h3>
-        <p>Правила поведения в лесу и парке.</p>
-        <div class="status-dot"></div>
+      <article class="bento-item item-medium light-theme">
+        <div class="icon-box">🎒</div>
+        <h3>Чек-лист</h3>
+        <p>Список вещей для безопасного похода в лес.</p>
+      </article>
+
+      <article class="bento-item item-medium dark-theme">
+        <div class="icon-box">⚡️</div>
+        <h3>Активность</h3>
+        <p>Подвижные игры для перемен на природе.</p>
+      </article>
+
+      <article class="bento-item item-wide gray-theme">
+        <div class="item-row">
+          <div class="text-part">
+            <h3>Методичка учителя</h3>
+            <p>Пошаговые сценарии уроков, тайминг и ожидаемые результаты. Минимум подготовки — максимум вовлечения.</p>
+          </div>
+          <button class="btn-circle-arrow">↘</button>
+        </div>
       </article>
     </div>
   </section>
+
+  <section class="stats-ticker">
+    <div class="ticker-item">
+      <span class="number">12</span>
+      <span class="label">Готовых маршрутов</span>
+    </div>
+    <div class="divider">/</div>
+    <div class="ticker-item">
+      <span class="number">450+</span>
+      <span class="label">Учеников</span>
+    </div>
+    <div class="divider">/</div>
+    <div class="ticker-item">
+      <span class="number">100%</span>
+      <span class="label">Безопасно</span>
+    </div>
+  </section>
+
+  <section class="info-split">
+    <div class="info-image"></div>
+    <div class="info-text">
+      <div class="mini-tag">О сообществе</div>
+      <h2>Объединяем классы</h2>
+      <p>Наш проект создан энтузиастами биологии. Мы верим, что лучший способ полюбить природу — это прикоснуться к ней. Присоединяйтесь к сообществу преподавателей-новаторов.</p>
+      <ul class="check-list">
+        <li>Бесплатный доступ ко всем материалам</li>
+        <li>Ежемесячные обновления маршрутов</li>
+        <li>Поддержка экспертов</li>
+      </ul>
+    </div>
+  </section>
+
 </main>
 
 <footer class="site-footer">
-  <div class="footer-pill">
-    <span>© BioGuide 2026</span>
-    <span id="contacts">school@bioguide.ru</span>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>BioGuide.</h4>
+      <p>Путеводитель по биологии для средней школы.</p>
+    </div>
+    <div class="footer-col">
+      <a href="#">Маршруты</a>
+      <a href="#">Материалы</a>
+      <a href="#">О нас</a>
+    </div>
+    <div class="footer-col">
+      <a href="#">Правила</a>
+      <a href="#">Безопасность</a>
+      <span id="contacts">mail@bioguide.ru</span>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 BioGuide Project. Все права защищены.
   </div>
 </footer>
 
@@ -86,17 +164,17 @@
   <div class="modal-backdrop" data-action="close"></div>
   <div class="modal-panel">
     <header class="modal-header">
-      <h3>Вопросы</h3>
+      <h3>Вопросы и ответы</h3>
       <button class="modal-close" data-action="close">✕</button>
     </header>
     <div class="modal-body">
       <dl class="faq-list">
-        <dt>Для кого это?</dt>
-        <dd>Для учеников 6–8 классов и учителей биологии.</dd>
-        <dt>Что если дождь?</dt>
-        <dd>Используйте наши сценарии для помещений.</dd>
-        <dt>Нужно оборудование?</dt>
-        <dd>Только смартфон и блокнот.</dd>
+        <dt>Нужна ли подготовка?</dt>
+        <dd>Минимальная. Скачайте PDF и следуйте инструкции.</dd>
+        <dt>Это платно?</dt>
+        <dd>Базовые маршруты полностью бесплатны.</dd>
+        <dt>Где проводить?</dt>
+        <dd>Любой парк, сквер или пришкольный участок.</dd>
       </dl>
     </div>
   </div>
