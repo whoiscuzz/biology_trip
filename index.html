@@ -4,107 +4,104 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Путеводитель по биологии</title>
-  <meta name="description" content="Путеводитель-исследование по биологии для 6-8 классов: экскурсии, справочные материалы, чек-листы и правила поведения.">
-  <link rel="stylesheet" href="public/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <h1>Путеводитель по биологии</h1>
-      </div>
-      <nav class="nav">
-        <button id="open-faq" class="btn-outline">FAQ</button>
-        <a class="btn-ghost" href="#contacts">Контакты</a>
-      </nav>
-    </div>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-content">
-          <h2 class="hero-title">Начни своё исследование природы</h2>
-          <p class="hero-sub">Короткий слоган под названием — наблюдай, записывай, делись открытиями. Подходит для 6–8 классов.</p>
-          <div class="hero-ctas">
-            <button id="open-faq-hero" class="btn-primary">FAQ</button>
-            <a class="btn-primary-outline" href="trip.html">Начать исследование</a>
-          </div>
-        </div>
-        <div class="hero-art">
-          <!-- decorative area, можно добавить изображение позже -->
-          <div class="placeholder-art" role="img" aria-label="Иллюстрация: листок растения">
-            <!-- simple inline SVG for decorative plant -->
-            <svg width="220" height="160" viewBox="0 0 220 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <defs>
-                <linearGradient id="g1" x1="0" x2="1">
-                  <stop offset="0" stop-color="#16A34A" stop-opacity="0.9"/>
-                  <stop offset="1" stop-color="#4ade80" stop-opacity="0.8"/>
-                </linearGradient>
-              </defs>
-              <g fill="none" stroke="url(#g1)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M30 140 C60 110, 80 80, 110 60" />
-                <path d="M110 60 C130 45, 150 50, 170 60" />
-                <path d="M60 110 C80 95, 95 75, 115 70" />
-                <path d="M80 90 C95 70, 120 60, 140 60" />
-              </g>
-            </svg>
-          </div>
+<header class="floating-header">
+  <div class="nav-pill">
+    <div class="brand">BioGuide</div>
+    <nav>
+      <a href="#about">О нас</a>
+      <a href="#trips">Экскурсии</a>
+      <button id="open-faq">FAQ</button>
+    </nav>
+    <a href="#contacts" class="btn-circle">→</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero-wrapper">
+    <div class="hero-grid">
+      <div class="hero-text-card">
+        <div class="badge">6–8 классы</div>
+        <h1 class="display-text">
+          ИССЛЕДУЙ<br>
+          <span class="highlight">ПРИРОДУ</span><br>
+          ВОКРУГ
+        </h1>
+        <p class="hero-desc">Готовые маршруты, чек-листы и правила для юных биологов.</p>
+        <div class="hero-actions">
+          <a href="trip.html" class="btn-primary-lg">Начать путь</a>
+          <button id="open-faq-hero" class="btn-icon">?</button>
         </div>
       </div>
-    </section>
 
-    <section class="intro container">
-      <h3>О проекте</h3>
-      <p>Этот путеводитель содержит готовые экскурсии и справочные материалы для школьников и преподавателей. Нажмите "Начать исследование", чтобы перейти к списку экскурсий.</p>
-      <div class="features">
-        <article class="feature">
-          <h4>Практические задания</h4>
-          <p>Чек-листы и простые задания для наблюдений на природе.</p>
-        </article>
-        <article class="feature">
-          <h4>Материалы для учителя</h4>
-          <p>Краткие описания маршрутов и методические подсказки.</p>
-        </article>
-        <article class="feature">
-          <h4>Безопасность</h4>
-          <p>Правила поведения и рекомендации для полевых работ.</p>
-        </article>
+      <div class="hero-visual-card">
+        <div class="abstract-nature">
+          <div class="leaf-shape"></div>
+          <div class="circle-shape"></div>
+        </div>
+        <div class="stat-bubble">
+          <span>12+</span>
+          <small>Маршрутов</small>
+        </div>
       </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© Путеводитель по биологии — для школьных исследований</p>
-      <p id="contacts">Контакты: пример@domain.tld</p>
     </div>
-  </footer>
+  </section>
 
-  <!-- FAQ Modal -->
-  <div id="faq-modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="faq-title">
-    <div class="modal-backdrop" data-action="close"></div>
-    <div class="modal-panel" role="document">
-      <header class="modal-header">
-        <h3 id="faq-title">Часто задаваемые вопросы</h3>
-        <button class="modal-close" data-action="close" aria-label="Закрыть">✕</button>
-      </header>
-      <div class="modal-body">
-        <dl class="faq-list">
-          <dt>Для кого предназначен путеводитель?</dt>
-          <dd>Для школьников 6–8 классов и педагогов, желающих провести полевые экскурсии.</dd>
-          <dt>Что делать в случае плохой погоды?</dt>
-          <dd>Отложить экскурсию или провести наблюдения в контролируемой среде (школьный двор, теплица).</dd>
-          <dt>Нужны ли специальные приборы?</dt>
-          <dd>Нет — достаточно блокнота, карандаша и, при желании, лупы или смартфона для фото.</dd>
-        </dl>
-      </div>
-      <footer class="modal-footer">
-        <button class="btn-primary" data-action="close">Понятно</button>
-      </footer>
+  <section class="bento-section" id="about">
+    <div class="bento-grid">
+      <article class="bento-card green-card">
+        <h3>Практика</h3>
+        <p>Чек-листы для наблюдений в полевых условиях.</p>
+        <div class="deco-line"></div>
+      </article>
+
+      <article class="bento-card image-card">
+        <h3>Учителям</h3>
+        <p>Методички и планы уроков.</p>
+      </article>
+
+      <article class="bento-card white-card">
+        <h3>Безопасность</h3>
+        <p>Правила поведения в лесу и парке.</p>
+        <div class="status-dot"></div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-pill">
+    <span>© BioGuide 2026</span>
+    <span id="contacts">school@bioguide.ru</span>
+  </div>
+</footer>
+
+<div id="faq-modal" class="modal" aria-hidden="true">
+  <div class="modal-backdrop" data-action="close"></div>
+  <div class="modal-panel">
+    <header class="modal-header">
+      <h3>Вопросы</h3>
+      <button class="modal-close" data-action="close">✕</button>
+    </header>
+    <div class="modal-body">
+      <dl class="faq-list">
+        <dt>Для кого это?</dt>
+        <dd>Для учеников 6–8 классов и учителей биологии.</dd>
+        <dt>Что если дождь?</dt>
+        <dd>Используйте наши сценарии для помещений.</dd>
+        <dt>Нужно оборудование?</dt>
+        <dd>Только смартфон и блокнот.</dd>
+      </dl>
     </div>
   </div>
+</div>
 
-  <script src="src/main.js" defer></script>
+<script src="main.js"></script>
 </body>
 </html>
