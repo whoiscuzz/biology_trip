@@ -207,7 +207,6 @@ main {
   backdrop-filter: blur(4px);
 }
 
-/* BENTO GRID */
 .wide-bento-section { margin-bottom: 120px; }
 .section-header { margin-bottom: 40px; }
 .section-header h2 { font-size: 40px; font-weight: 800; margin-bottom: 12px; }
@@ -235,13 +234,11 @@ main {
 .bento-item h3 { font-size: 24px; font-weight: 700; margin-bottom: 12px; z-index: 2; position: relative; }
 .bento-item p { font-size: 15px; opacity: 0.9; line-height: 1.5; z-index: 2; position: relative; max-width: 90%; }
 
-/* Grid positioning */
 .item-large { grid-column: span 2; }
 .item-tall { grid-column: span 1; grid-row: span 2; }
 .item-wide { grid-column: span 2; }
 .item-medium { grid-column: span 1; }
 
-/* Themes */
 .green-theme { background: #14532D; color: white; }
 .green-theme .decoration-circle {
   position: absolute; right: -20px; bottom: -40px;
