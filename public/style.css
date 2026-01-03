@@ -202,7 +202,6 @@ main {
   backdrop-filter: blur(4px);
 }
 
-/* BENTO GRID */
 .wide-bento-section { margin-bottom: 120px; }
 .section-header { margin-bottom: 40px; }
 .section-header h2 { font-size: 40px; font-weight: 800; margin-bottom: 12px; }
