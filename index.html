@@ -34,15 +34,12 @@
   <section class="hero-section">
     <div class="hero-content">
       <div class="hero-label">Для 6–8 классов</div>
-      <h1 class="hero-title">
-        ПОГРУЖЕНИЕ<br>
-        В <span class="accent-text">ЖИВУЮ <span class="title-graphic" aria-hidden="true">
-          <!-- inline SVG листа, чтобы не добавлять новый файл -->
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-            <path fill="currentColor" d="M12 2C8 6 4 8 2 9c.5 4 3.5 7.5 8 8 0 0 1.5-4 6-8 2-1 2.5-4 2-7-2 .5-5 1-6 0z"/>
-          </svg>
-        </span></span> ПРИРОДУ
-      </h1>
+      <div class="hero-title-wrapper">
+	    <h1 class="hero-title">
+	      ПОГРУЖЕНИЕ<br>
+	      В <span class="accent-text">ЖИВУЮ</span> ПРИРОДУ
+	    </h1>
+  	</div>
       <p class="hero-desc">
         Комплексные маршруты для школьных исследований. Мы объединяем теорию учебников с практикой реального мира. Исследуй, наблюдай, записывай.
       </p>
@@ -55,6 +52,8 @@
       <div class="visual-card main-visual">
         <!-- бейджи удалены по просьбе -->
       </div>
+      <!-- Локальная картинка, выровненная по правой колонке сетки -->
+      <img class="hero-side-img" src="./public/images/hero-photo.svg" alt="Лист на ветке">
     </div>
   </section>
 
@@ -180,6 +179,6 @@
   </div>
 </div>
 
-<script src="main.js"></script>
+<script src="./main.js"></script>
 </body>
 </html>
