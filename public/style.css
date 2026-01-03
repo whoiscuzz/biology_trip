@@ -138,6 +138,11 @@ main {
   font-style: italic;
 }
 
+/* Цвет для слова «Эко» в заголовке */
+.eco-green { color: var(--color-green); }
+/* Явно тёмный цвет для слова «путеводитель» */
+.title-black { color: var(--color-dark); }
+
 .hero-desc {
   font-size: 20px;
   color: var(--color-gray);
@@ -299,7 +304,7 @@ main {
 }
 .info-image {
   height: 500px;
-  background: url('https://images.unsplash.com/photo-1550989460-0adf9ea622e2?q=80&w=1000&auto=format&fit=crop') center/cover;
+  background: url('https://avatars.mds.yandex.net/get-altay/15344725/2a0000019a2f552a2116bae182334d0d7abb/L_height') center/cover;
   border-radius: var(--border-radius);
 }
 .mini-tag { color: var(--color-green); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; font-size: 12px; }
