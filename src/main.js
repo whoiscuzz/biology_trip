@@ -9,7 +9,7 @@
     function open(){
       previouslyFocused = document.activeElement;
       modal.setAttribute('aria-hidden','false');
-      // focus first focusable element inside modal
+      // set focus to the initial focusable element within the modal.
       var focusable = modal.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
       if(focusable) focusable.focus();
       document.addEventListener('keydown', onKeyDown);
