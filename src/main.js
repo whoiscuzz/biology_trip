@@ -34,7 +34,7 @@
     if(backdrop) backdrop.addEventListener('click', function(){ close(); });
   }
 
-  // Setup modals on page load
+  // setup modals on page load
   document.addEventListener('DOMContentLoaded', function(){
     setupModal('#open-faq, #open-faq-hero', 'faq-modal');
     setupModal('#open-faq-2', 'faq-modal-2');
